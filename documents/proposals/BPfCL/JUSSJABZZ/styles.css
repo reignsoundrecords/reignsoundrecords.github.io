@@ -1,22 +1,22 @@
 /* Body Style */
 body {
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh; /* Adjust to prevent cut-off */
     background-color: #f5f5f5;
 }
 
 /* Full Page Wrapper */
 .document-wrapper {
     position: relative;
-    width: 80%;
+    width: 90%;  /* Use 90% width for more flexibility */
     max-width: 800px;
-    min-height: 90vh;
+    min-height: 90vh; /* Ensures the document doesn't overflow */
     background-color: #fff;
     padding: 30px;
     border: 1px solid #ddd;
@@ -147,5 +147,38 @@ h3 {
     /* Reduce font size for footer */
     .branding-footer {
         font-size: 12px;
+    }
+
+    /* Adjust partner grid for small screens */
+    .partner-grid {
+        grid-template-columns: 1fr 1fr;  /* Display 2 items per row */
+    }
+
+    .partner-brand {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce font sizes and padding for very small screens */
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .meta-data {
+        font-size: 12px;
+    }
+
+    .partner-brand {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .branding-footer {
+        font-size: 10px;
     }
 }
