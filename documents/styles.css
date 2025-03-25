@@ -71,7 +71,7 @@ mark {
     margin-bottom: 10px;
 }
 
-.recipient .email {
+.recipient .communication-channel {
     font-style: italic;
     color: #555;
 }
