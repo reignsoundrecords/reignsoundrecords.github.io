@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
@@ -19,13 +19,13 @@
 
         <!-- Form Number Section -->
         <div style="text-align: right; font-size: 14px; font-weight: margin-bottom: 10px; color: rgba(0, 0, 0, 0.5);">
-            Form ID: <strong>BPfCL-RR</strong>
+            Form ID: <strong>ORS-RR</strong>
         </div>
 
         <!-- Recipient Section with box -->
         <div class="recipient">
-            <div><strong>RECIPIENT:</strong> JUSS JABZZ (<i>professional name</i>)</div>
-            <div><strong>RECIPIENT's E-MAIL:</strong> <span class="email">J************1@gmail.com</span></div>
+            <div><strong>RECIPIENT:</strong> <span class="at-sign">@</span>TAYLORCHESSIER (<i>professional name</i>)</div>
+            <div><strong>RECIPIENT's CONTACT:</strong> <span class="email">[INSTAGRAM]</span></div>
         </div><br>
 
         <!-- Main Document Content -->
@@ -45,13 +45,10 @@
             <div class="meta-data">
                 
                 <div class="date">
-                    c.DATE: <strong>2025-02-24</strong>
+                    c.DATE: <strong>2025-03-25</strong>
                 </div>
                 <div class="organization">
                     ORGANIZATION: Reignsound
-                </div>
-                <div class="author">
-                    PROPOSER: ATAAH KING
                 </div>
                 <div class="subject">
                     SUBJECT: Operations
@@ -75,14 +72,23 @@
 
         <!-- Footer with Document Number -->
         <div class="branding-footer">
-            <span>Document No.: <span class="document-number">BPfCL-RR-2025-02-001</span></span>
+            <span>Document No.: <span class="document-number">ORS-RR-2025-03-001</span></span>
         </div>
 
     </div>
 
-    <script src="../../../load-agreements.js"></script>
-    <script src="../../../load-partners.js"></script>
-    <script src="../../../load-title-subtitle.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Correct path to partners.html from index.html
+            fetch("../../partners.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("partners-section").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading partners:", error));
+        });
+    </script>
+    <script src="../../load-title-subtitle.js"></script>
 
 </body>
 </html>
