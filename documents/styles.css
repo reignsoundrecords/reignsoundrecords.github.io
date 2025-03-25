@@ -24,6 +24,23 @@ body {
     overflow: hidden;
 }
 
+.special-hyperlink {
+    color: rgb(61, 61, 61);
+}
+
+.trademarking {
+    font-size: 0.5em;
+}
+
+.trademark-r {
+    font-size: 0.6em;
+    vertical-align: 0.6em;
+}
+
+mark {
+    background-color: rgb(253, 185, 39);
+}
+
 /* Title Section */
 .title {
     font-size: 40px;
