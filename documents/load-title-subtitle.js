@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let subtitlePath = "";
 
     if (pathSegments.includes("BPfCL")) {
-        subtitlePath = "/documents/proposals/BPfCL/_subtitle.html";
+        subtitlePath = "/documents/proposals/BPfCL/subtitle.html";
     } else if (pathSegments.includes("ORS")) {
-        subtitlePath = "/documents/ORS/_subtitle.html";
+        subtitlePath = "/documents/ORS/subtitle.html";
     }
 
     if (subtitlePath) {
