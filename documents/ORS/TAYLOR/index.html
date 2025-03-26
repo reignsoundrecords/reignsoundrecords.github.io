@@ -59,6 +59,8 @@
                 </div>
             </div>
 
+            <div id="agreements-section"></div>
+
             <div id="partners-section"></div>
             
         </div>
@@ -71,6 +73,16 @@
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Correct path to agreements.html from index.html
+            fetch("/documents/agreements.html")  
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("agreements-section").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading agreements:", error));
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
             // Load the universal title
             fetch("/documents/_title.html")
