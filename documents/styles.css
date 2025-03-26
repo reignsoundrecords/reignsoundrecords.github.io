@@ -5,7 +5,11 @@
 
 .agreement-green {
     background-color: lightgreen;
-    border-color: green;
+    padding: 20px;
+}
+
+.agreement-yellow {
+    background-color: lightyellow;
     padding: 20px;
 }
 
@@ -32,6 +36,13 @@
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+/* Agreement Footer with Effective Date */
+.effective-date {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* Last Updated line*/
