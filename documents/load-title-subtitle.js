@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Load the universal title
-    fetch("/documents/_title.html")
+    fetch("/documents/title.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("title-section").innerHTML = data;
