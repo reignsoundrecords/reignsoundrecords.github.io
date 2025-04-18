@@ -24,6 +24,7 @@
             width: 80%;
             max-width: 600px;
             padding: 20px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -42,6 +43,7 @@
             width: 80%;
             text-align: center;
             background: black;
+            border-radius: 5px;
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -49,8 +51,20 @@
         .email-signup {
             margin-top: 20px;
         }
+
         .trademarking {
-            font-size: 0.5em;
+            font-size: 0.4rem;
+            vertical-align: 0.6rem;
+        }
+
+        .trademarking-title {
+            font-size: 0.3rem;
+            vertical-align: 1rem;
+        }
+
+        .trademarking-title-XL {
+            font-size: 0.4rem;
+            vertical-align: 7rem;
         }
 
         /* Style for the contact-div */
@@ -89,8 +103,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">REIGNSOUND<sup class="trademarking">SM</sup></div>
-        <div class="logo-xl">XL</div>
+        <div class="logo">REIGNSOUND<sup class="trademarking-title">SM</sup></div>
+        <div class="logo-xl">XL<sup class="trademarking-title-XL">TM</sup></div>
 
         <!-- Contact Div for "REIGNSOUNDXL" -->
         <div class="contact-div" onclick="toggleDetails(this)" role="button" tabindex="0">
@@ -101,7 +115,7 @@
                 </span>
                 <span class="more-indicator">+</span>
                 <span class="hidden-details">
-                    <br>For inquiries, please reach out to us via e-mail at: <a href="mailto:press.reignsound@gmail.com">press.reignsound@gmail.com</a><br><br>
+                    <br>For inquiries, please reach out via e-mail at: <a href="mailto:press.reignsound@gmail.com">press.reignsound@gmail.com</a><br><br>
                     <i>UPDATED: Friday, April 18, 2025</i>
                 </span>
             </p>
