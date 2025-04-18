@@ -52,16 +52,68 @@
         .trademarking {
             font-size: 0.5em;
         }
+
+        /* Style for the contact-div */
+        .contact-div {
+            background-color: lightyellow;
+            padding: 20px;
+            border: 1px solid #e0c66d;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: 'Merriweather', serif;
+            max-width: 700px;
+            margin: 20px auto;
+            color: #333;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Add style for the visibility toggle feature */
+        .hidden-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .more-indicator {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-div.expanded .hidden-details {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">REIGNSOUND<sup class="trademarking">SM</sup></div>
         <div class="logo-xl">XL</div>
-        <p>REIGNSOUNDXL<sup class="trademarking">TM</sup> is the PROMOTIONAL DEPARTMENT of REIGNSOUND<sup class="trademarking">SM</sup>.</p>
-        
+
+        <!-- Contact Div for "REIGNSOUNDXL" -->
+        <div class="contact-div" onclick="toggleDetails(this)" role="button" tabindex="0">
+            <p>
+                <i>NOTE:</i>
+                <span class="visible-part">
+                    REIGNSOUNDXL<sup class="trademarking">TM</sup> is the PROMOTIONAL DEPARTMENT of REIGNSOUND<sup class="trademarking">SM</sup>.<br><br>
+                </span>
+                <span class="more-indicator">+</span>
+                <span class="hidden-details">
+                    <br>For inquiries, please reach out to us via e-mail at: <a href="mailto:press.reignsound@gmail.com">press.reignsound@gmail.com</a><br><br>
+                    <i>UPDATED: Friday, April 18, 2025</i>
+                </span>
+            </p>
+        </div>
+
         <a href="https://reignsoundpress.github.io/" class="button">Press Releases</a>
-        
     </div>
+
+    <script>
+        function toggleDetails(element) {
+            element.classList.toggle('expanded');
+        }
+    </script>
 </body>
 </html>
