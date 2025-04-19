@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Daily Schedule</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+        <style>
+
+            body {
+                margin: 0;
+                font-family: 'Merriweather', serif;
+                background-color: #f8f8f8;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                padding: 40px 20px;
+            }
+
+            .schedule-container {
+                width: 100%;
+                max-width: 800px;
+            }
+
+            .hour-block {
+                background-color: lightyellow;
+                border: 1px solid #e0c66d;
+                border-radius: 10px;
+                padding: 15px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background-color 0.3s;
+            }
+
+            .hour-block.current {
+                background-color: #ffe066;
+                border-color: #d4af37;
+            }
+
+            .time {
+                font-weight: bold;
+                font-size: 18px;
+                min-width: 70px;
+            }
+
+            .title {
+                font-size: 32px;
+            }
+
+            .trademarking {
+                font-size: 0.4rem;
+                vertical-align: 1.3rem;
+            }
+
+            .trademark-r {
+                font-size: 0.6em;
+                vertical-align: 0.6em;
+            }
+
+            .event {
+                flex-grow: 1;
+                padding-left: 15px;
+                font-size: 16px;
+            }
+            
+        </style>
+        
+    </head>
+
+    <body>
+
+        <h1 id="page-title"></h1>
+  <div class="schedule-container" id="schedule">
+    <!-- Hour blocks will be inserted here dynamically -->
+  </div>
+
+  <script>
+    const schedule = [
+      { time: "00:00", event: "Prayer and Bible Study" },
+      { time: "01:00", event: "Breakfast + Planning" },
+      { time: "02:00", event: "Workout & Shower" },
+      { time: "03:00", event: "Programming" },
+      { time: "04:00", event: "Music Production" },
+      { time: "05:00", event: "Social Media Rounds" },
+      { time: "06:00", event: "News & Email Check" },
+      { time: "07:00", event: "Light Admin Tasks" },
+      { time: "08:00", event: "Prep for Worship" },
+      { time: "09:00", event: "Morning Worship Service (Start)" },
+      { time: "10:00", event: "Worship Continues" },
+      { time: "11:00", event: "Worship Continues" },
+      { time: "12:00", event: "Worship Continues" },
+      { time: "13:00", event: "Worship Continues" },
+      { time: "14:00", event: "Worship Ends + Lunch" },
+      { time: "15:00", event: "Content Creation" },
+      { time: "16:00", event: "Content Creation" },
+      { time: "17:00", event: "Music Writing" },
+      { time: "18:00", event: "Sales & Promotions" },
+      { time: "19:00", event: "Evening Admin Tasks" },
+      { time: "20:00", event: "Free / Overflow Work" },
+      { time: "21:00", event: "Prayer + Reflection" },
+      { time: "22:00", event: "Chill / Study / Anime" },
+      { time: "23:00", event: "Wind Down / Prep for Sleep" },
+    ];
+
+    const container = document.getElementById('schedule');
+    const title = document.getElementById('page-title');
+    const today = new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    title.textContent = `REIGNSOUND RECORDS, SCHEDULE for ${today}`;
+
+    const currentHour = new Date().getHours();
+
+    schedule.forEach((slot, index) => {
+      const block = document.createElement('div');
+      block.className = 'hour-block';
+      if (index === currentHour) block.classList.add('current');
+
+      const time = document.createElement('div');
+      time.className = 'time';
+      time.textContent = slot.time;
+
+      const event = document.createElement('div');
+      event.className = 'event';
+      event.textContent = slot.event;
+
+      block.appendChild(time);
+      block.appendChild(event);
+      container.appendChild(block);
+    });
+  </script>
+    
+    </body>
+
+</html>
